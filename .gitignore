@@ -12,7 +12,7 @@ sql-dump-*.sql
 !.env.example
 
 # Application
-web/app/plugins/*
+#web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*
 !web/app/mu-plugins/.gitkeep
@@ -32,3 +32,17 @@ node_modules
 # Vagrant
 bin
 .vagrant
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+database.yml
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
