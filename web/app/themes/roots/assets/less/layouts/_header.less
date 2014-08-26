@@ -1,0 +1,94 @@
+.banner {
+	background:#012e47;
+	color:white;
+	position: relative;
+}
+.navbar-brand {
+	position:absolute;
+	top:19px;
+	padding:0;
+}
+.navbar {
+	margin-bottom:0px; 
+}
+#lead {
+	padding:30px 0;
+	position: static;
+	.col-sm-3 {
+		position: static;
+	}
+	&.isblog {
+		padding: 100px 0 103px;
+	} 
+}
+
+@media (min-width: 768px) {
+	.navbar-nav {
+		float:right;
+	}
+	.socio {
+		float: right;
+		a {
+			display: inline-block;
+			margin-right: 9px;
+			margin-top:11px;
+			&:last-of-type {
+				margin-right:0px;
+			}
+		}
+	}
+}
+.navbar-toggle {
+	position: relative;
+	float: right;
+	margin-right: 15px;
+	padding: 9px 10px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	background-color: transparent;
+	background-image: none;
+	border: none;
+	border-radius: 4px;
+	.navbar-toggle .icon-bar {
+		display: block;
+		width: 22px;
+		height: 3px;
+		border-radius: 1px;
+	}
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #011e2d;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+@media (max-width: @screen-md-max) {
+	.navbar-brand {
+		width:220px;
+	}
+}  
+
+@media (max-width: @screen-sm-max) {
+	.navbar-brand {
+		width:185px;
+	}
+	#lead {
+		h1 {
+			font-size: 40px;
+		}
+	}
+	article .entry-title, article .entry-title a {
+		font-size: 25px;
+		line-height: 36px;
+	}
+	p, article .entry-summary p {
+		font-size: 15px ;
+		line-height: 28px;
+	}
+}
+
+@media (max-width: @screen-xs-max) {
+	#lead {
+		min-height: 120px;
+	}
+}

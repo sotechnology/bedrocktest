@@ -1,0 +1,350 @@
+// Content wrapper
+.wrap { }
+
+// Main content area
+.main {
+	padding-top: 51px;
+  .make-sm-column(@main-sm-columns);
+
+  .sidebar-primary & {
+    .make-sm-column(@main-sm-columns - @sidebar-sm-columns);
+  }
+}
+h2.arrow {
+	font-size: 20px;
+	color: @dblue;
+	i {
+		color: #444;
+		font-size: 14px;
+	}
+}
+img {
+	max-width: 100%;
+	height:auto;
+}
+p {
+	font-size: 16px;
+	line-height: 30px;
+	font-family: @osans;
+	color: #444;
+	font-weight: 100;
+}
+.wrap.container {
+	background:white;
+	border:1px solid #e0e0e0;
+	border-top: none;
+	overflow:hidden;
+	margin-bottom: 50px;
+
+}
+.search-form-static {
+	.input-group {
+		width: calc(100% + 31px);
+		margin-left: -1px;
+		position: absolute;
+		top: 0;
+		right: -15px;
+		left: 0;
+		/* margin-right: -15px; */
+		input {
+			height:100%;
+			background: url(../img/mag.png) left no-repeat @lblue;
+			padding-left: 40px;
+			color: white;
+			font-family: @franklin;
+			height: 51px;
+			line-height: 51px;
+			border: none;
+			background-position: 8px 11px;
+		}
+		input::-webkit-input-placeholder { /* WebKit browsers */
+		    color:    #6dc4f1;
+		    font-family: @franklin;
+		    font-size: 14px;
+		    text-transform: uppercase;
+		}
+		input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		    color:    #6dc4f1;
+		    font-family: @franklin;
+		    font-size: 14px;
+		    text-transform: uppercase;
+		}
+		input::-moz-placeholder { /* Mozilla Firefox 19+ */
+		    color:    #6dc4f1;
+		    font-family: @franklin;
+		    font-size: 14px;
+		    text-transform: uppercase;
+		}
+		input:-ms-input-placeholder { /* Internet Explorer 10+ */
+		    color:    #6dc4f1;
+		    font-family: @franklin;
+		    font-size: 14px;
+		    text-transform: uppercase;
+		}
+	}
+}
+article {
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #f0f0f0;
+	.image {
+		position: relative;
+		.time {
+			position: absolute;
+			top: 0;
+			right:0;
+			display: inline-block;
+			background: white;
+			color: @lblue;
+			font-size: 14px;
+			padding: 8px;
+			font-weight: bold;
+			i {
+				color: #d9d9da
+			}
+		}
+	}
+	.meta {
+		font-size: 14px;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		a {
+			font-family: @osans;
+			font-weight: 600;
+			text-transform: none;
+		}
+	}
+	.entry-title, .entry-title a {
+			font-family: @osans;
+			text-transform: none;
+			color: @dblue;
+			font-weight: 100;
+			text-decoration: none !important;
+			font-size: 39px;
+			line-height: 42px;
+	}
+	.entry-summary {
+		p { 
+			font-size: 16px;
+			line-height: 35px;
+			color: #444;
+			font-weight: 300;
+			a {
+				font-family: @osans;
+				text-transform: none;
+				color: @red;
+			}
+		}
+	}
+}
+.single {
+	article {
+		header {
+			padding-bottom: 70px;
+			margin-bottom: 40px;
+			border-bottom: 1px solid #f9f9f9;
+			.socio-share {
+				margin-bottom: 0px;
+				margin-top: 13px;
+			}
+		}
+		footer {
+			border-top: 1px solid #f0f0f0;
+			h2 {
+				font-size: 28px;
+				color: @dblue;
+			}
+		}
+	}
+	.post-author {
+		text-align: center;
+		img {
+			float: none;
+			clear:both;
+			margin-bottom: 10px;
+		}
+		.author-name {
+			font-size: 14px;
+			font-weight: 100;
+		 	a {
+		 		font-weight: 600;
+				font-family: @osans;
+			}
+		}
+		.btn-clear {
+			margin-top: 10px;
+			margin-bottom: 20px;
+			font-size: 14px;
+		}
+	}
+}
+article.article-mini {
+	border-bottom: none;
+	margin-bottom: 10px;
+	padding-bottom: 16px;
+	h3 {
+		margin-top: 0px;
+		line-height: 0.5em;
+		a {
+			font-size: 18px;
+			line-height: 1em;
+			&.caps {
+				text-transform: uppercase;
+			}
+		}
+	}
+	.meta {
+		margin-bottom: 5px;
+	}
+}
+.author-intro {
+	text-align: center;
+	h1 {
+		font-size: 20px;
+	}
+	img {
+		margin-bottom: 20px;
+	}
+}
+.author-bio {
+	padding-top: 40px;
+	padding-left: 40px;
+	border-left: 1px solid #f0f0f0;
+	p {
+		margin-bottom: 20px;
+	}
+	.featured {
+		margin-left: -40px;
+		margin-right: -30px;
+	}
+}
+.row.bio {
+	border-bottom: 1px solid #f0f0f0;
+}
+.author-posts {
+	h2 {
+		font-size: 24px;
+	}
+	article {
+		padding-top: 30px;
+		img {
+			margin-right: 30px;
+		}
+		.date {
+			margin-top: 40px;
+			font-size: 16px;
+			font-weight: 300;
+			margin-bottom: 0;
+		}
+		h3 {
+			margin-top: 0;
+			line-height:0.5em;
+			a {
+				font-size: 18px;
+				color: #444;
+			}
+		}
+		&:first-of-type {
+			padding-top: 20px;
+		}
+	}
+}
+.story-single-feed {
+	padding: 0;
+	position: relative;
+	.overlay {
+		background:url(../img/blue-overlay.png) repeat;
+		position: absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		width:100%;
+		height:100%;
+		opacity: 0;
+		text-align: center;
+		color: white;
+		h2 {
+			font-size: 31px;
+			margin-top: 80px;
+			font-family: @osans;
+			font-weight: 100;
+			text-transform: none;
+		}
+		&:hover {
+			opacity: 1;
+			transition:0.3s all;
+			-webkit-transition:0.3s all;
+			-moz-transition:0.3s all;
+			-o-transition:0.3s all;
+		}
+		.rm {
+			font-family: @osans;
+			display: inline-block;
+			padding: 0 20px 10px;
+			border-bottom: 1px solid white;
+			text-transform: none;
+		}
+	}
+}
+.post-type-archive-stories {
+	.wrap.container {
+		text-align: center;
+		padding-bottom: 50px;
+		p {
+			font-size: 21px;
+		}
+	}
+	h1 {
+		font-family: @osans;
+		font-size: 51px;
+		text-align: center;
+		color: @dblue;
+		font-weight: 100;
+		text-transform: none;
+	}
+}
+.single-stories {
+	article {
+		border-bottom: none;
+		header {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+			.image {
+				display: inline-block;
+				max-width: 110%;
+				margin-left: -10%;
+				margin-bottom: 30px;
+				img {
+					display: inline-block;
+					float: right;
+				}
+			}
+		}
+		footer {
+			border-bottom: none;
+		}
+		h1 {
+			font-size: 42px;
+			color: @dblue;
+			font-family: @osans;
+			font-weight: 100;
+			text-transform: none; 
+		}
+		img {
+		}
+		h2, h3, h4, h5, h6 {
+			font-family: @osans;
+			text-transform: none;
+			font-weight: 100;
+			color: #012e47;
+		}
+	}
+}
+
+@media (max-width: @screen-md-max) {}  
+
+@media (max-width: @screen-sm-max) {}
+
+@media (max-width: @screen-xs-max) {}

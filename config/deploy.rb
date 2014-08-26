@@ -7,6 +7,9 @@ set :repo_url, 'git@github.com:sotechnology/bedrocktest.git'
 # Setup WordPress
 ############################################
 
+set :wp_user, "sotechnology" # The admin username
+set :wp_email, "steven.oddy@sotechnology.co.uk" # The admin email address
+set :wp_sitename, "WP Deploy Test" # The site title
 set :wp_localurl, "http://wpdeploy.dev" # Your local environment URL
 
 # Branch options
