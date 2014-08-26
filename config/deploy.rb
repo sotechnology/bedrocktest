@@ -7,7 +7,7 @@ set :repo_url, 'git@github.com:sotechnology/bedrocktest.git'
 # Setup WordPress
 ############################################
 
-set :wp_localurl, "http://bedrocktest.dev" # Your local environment URL
+set :wp_localurl, "http://wpdeploy.dev" # Your local environment URL
 
 # Branch options
 # Prompts for the branch name (defaults to current branch)
