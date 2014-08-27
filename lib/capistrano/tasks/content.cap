@@ -6,8 +6,8 @@ namespace :uploads do
   	run_locally do
   		roles(:all).each do |role|
 
-			    execute :rsync, "-avzO #{role.user}@#{role.hostname}:#{shared_path}/content/uploads/ content/uploads"
-			    execute :rsync, "-avzO content/uploads/ #{role.user}@#{role.hostname}:#{shared_path}/content/uploads"
+			    execute :rsync, "-avzO #{role.user}@#{role.hostname}:#{shared_path}/web/app/uploads/ web/app/uploads"
+			    execute :rsync, "-avzO web/app/uploads/ #{role.user}@#{role.hostname}:#{shared_path}/web/app/uploads"
 
 		  end
 	  end

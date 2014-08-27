@@ -29,6 +29,7 @@ set :npm_flags, '--silent'
 # run grunt
 set :grunt_tasks, "build"                                      # default
 set :grunt_target_path, -> { release_path.join('web/app/themes/roots') } 
+before 'deploy:updated', 'grunt'
 
 
 
