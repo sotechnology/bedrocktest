@@ -19,13 +19,18 @@ set :wp_localurl, "http://wpdeploy.dev" # Your local environment URL
 # Hardcodes branch to always be master
 # This could be overridden in a stage config file
 set :branch, :master
-
 set :deploy_to, -> { "/home/#{fetch(:application)}/public_html/deploy" }
+set :log_level, :info
 
+# install node
 set :npm_target_path, -> { release_path.join('web/app/themes/roots') }
 set :npm_flags, '--silent'
 
-set :log_level, :info
+# run grunt
+set :grunt_tasks, "build"                                      # default
+set :grunt_target_path, -> { release_path.join('web/app/themes/roots') } 
+
+
 
 # Apache users with .htaccess files:
 # it needs to be added to linked_files so it persists across deploys:
