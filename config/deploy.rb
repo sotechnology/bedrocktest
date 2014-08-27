@@ -23,6 +23,7 @@ set :branch, :master
 set :deploy_to, -> { "/home/#{fetch(:application)}/public_html/deploy" }
 
 set :npm_target_path, -> { release_path.join('web/app/themes/roots') }
+set :npm_flags, '--silent'
 
 set :log_level, :info
 

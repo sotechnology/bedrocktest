@@ -23,15 +23,15 @@ var Roots = {
   common: {
     init: function() {
       function kFormatter(num) {
-        return num > 999 ? (num/1000).toFixed(1) + 'K' : num
-      };
+        return num > 999 ? (num/1000).toFixed(1) + 'K' : num;
+      }
       $('.socio-share').each(function() {
       var total = 0;
       $(this).find('.ssba_sharecount').each(function () {
-          total += parseInt($(this).text(), 10)
+          total += parseInt($(this).text(), 10);
       });
       var print = kFormatter(total);
-      $(this).find('.total-shares').text(print) 
+      $(this).find('.total-shares').text(print);
 
       });
     }
