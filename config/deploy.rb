@@ -1,5 +1,3 @@
-
-
 set :application, 'bedrocktest'
 set :repo_url, 'git@github.com:sotechnology/bedrocktest.git'
 

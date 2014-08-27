@@ -1,6 +1,8 @@
 set :stage, :staging
 set :stage_url, "http://bedrocktest.staging.sotechnology.co.uk"
 
+set :branch, :development
+
 # Simple Role Syntax
 # ==================
 #role :app, %w{deploy@example.com}
