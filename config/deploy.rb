@@ -20,16 +20,6 @@ set :branch, :master
 set :deploy_to, -> { "/home/#{fetch(:application)}/public_html/deploy" }
 set :log_level, :info
 
-# install node
-set :npm_target_path, -> { release_path.join('web/app/themes/roots') }
-set :npm_flags, '--silent'
-
-# run grunt
-set :grunt_tasks, "build"                                      # default
-set :grunt_target_path, -> { release_path.join('web/app/themes/roots') } 
-before 'deploy:updated', 'grunt'
-
-
 
 # Apache users with .htaccess files:
 # it needs to be added to linked_files so it persists across deploys:
@@ -45,8 +35,23 @@ namespace :deploy do
       # execute :service, :nginx, :reload
     end
   end
-end
 
+  task :compile_assets do
+    run_locally do
+      within fetch(:local_theme_path) do
+        execute :grunt, :build
+      end
+    end
+  end
+
+  task :copy_assets do
+    invoke 'deploy:compile_assets'
+
+    on roles(:web) do
+      #upload! fetch(:local_theme_path).join('dist'), release_path.join(fetch(:theme_path)), recursive: true
+    end
+  end
+end
 # The above restart task is not run by default
 # Uncomment the following line to run it on deploys if needed
 # after 'deploy:publishing', 'deploy:restart'
