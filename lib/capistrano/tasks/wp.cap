@@ -27,7 +27,7 @@ namespace :wp do
         # Create .htaccess in remote environment
         accessfile = ERB.new(File.read('config/templates/.htaccess.erb')).result(binding)
         io = StringIO.new(accessfile)
-        upload! io, File.join(shared_path, ".htaccess")
+        upload! io, File.join("{shared_path}/web", ".htaccess")
       end
       # Set some permissions
       invoke 'wp:set_permissions'
